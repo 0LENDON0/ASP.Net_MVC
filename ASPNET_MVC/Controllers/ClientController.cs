@@ -14,5 +14,20 @@ namespace ASPNET_MVC.Controllers
         {
             return View();
         }
-	}
+
+        public ActionResult Features()
+        {
+            return View();
+        }
+
+        public ActionResult Pricing()
+        {
+            return View();
+        }
+
+        public ActionResult About()
+        {
+            return View();
+        }
+    }
 }

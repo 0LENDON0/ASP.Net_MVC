@@ -6,31 +6,61 @@
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
     @Styles.Render("~/bundles/css/bootstrap")
+    @Scripts.Render("~/bundles/js/jquery")
+    @Scripts.Render("~/bundles/js/bootstrap")
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Disabled</a>
-                </li>
-            </ul>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <!-- Container wrapper -->
+        <div class="container">
+            <!-- Navbar brand -->
+            <a class="navbar-brand me-2" href="/">
+                <!--  <img
+                height="16"
+                alt=""
+                loading="lazy"
+                style="margin-top: -1px;" /> -->
+                Rantevoú
+            </a>
+
+            <!-- Toggle button -->
+            <button class="navbar-toggler"
+                    type="button"
+                    data-mdb-toggle="collapse"
+                    data-mdb-target="#navbarButtonsExample"
+                    aria-controls="navbarButtonsExample"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <!-- Collapsible wrapper -->
+            <div class="collapse navbar-collapse" id="navbarButtonsExample">
+                <!-- Left links -->
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        @Html.RouteLink("Features", "features", null, new { @class = "nav-link" })
+                    </li>
+                    <li class="nav-item">
+                        @Html.RouteLink("Pricing", "pricing", null, new { @class = "nav-link" })
+                    </li>
+                    <li class="nav-item">
+                        @Html.RouteLink("About Us", "aboutus", null, new { @class = "nav-link" })
+                    </li>
+                </ul>
+                <!-- Left links -->
+                <div class="d-flex align-items-center">
+                    @Html.RouteLink("Login", "login", null, new { @class = "btn text-primary  px-3 me-2" })
+                    @Html.RouteLink("Sign Up", "signup", null, new { @class = "btn btn-primary me-3" })
+                </div>
+            </div>
+            <!-- Collapsible wrapper -->
         </div>
+        <!-- Container wrapper -->
     </nav>
-    <div>
+    <!-- Navbar -->
+    <div class="container">
         @RenderBody()
     </div>
 </body>

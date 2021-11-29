@@ -61,8 +61,16 @@ D:\Lendon\ASP.Net_MVC\ASPNET_MVC\bin\System.Web.Webpages.Razor.xml
 D:\Lendon\ASP.Net_MVC\ASPNET_MVC\bin\System.Web.Helpers.xml
 D:\Lendon\ASP.Net_MVC\ASPNET_MVC\bin\System.Web.Mvc.xml
 D:\Lendon\ASP.Net_MVC\ASPNET_MVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\Lendon\ASP.Net_MVC\ASPNET_MVC\obj\Debug\ASPNET_MVC.csprojResolveAssemblyReference.cache
 D:\Lendon\ASP.Net_MVC\ASPNET_MVC\obj\Debug\ASPNET_MVC.dll
 D:\Lendon\ASP.Net_MVC\ASPNET_MVC\obj\Debug\ASPNET_MVC.pdb
 D:\Lendon\ASP.Net_MVC\ASPNET_MVC\bin\DLL\System.Web.Optimization.dll
 D:\Lendon\ASP.Net_MVC\ASPNET_MVC\bin\System.Web.Optimization.dll
+D:\Lendon\ASP.Net_MVC\ASPNET_MVC\bin\Antlr3.Runtime.dll
+D:\Lendon\ASP.Net_MVC\ASPNET_MVC\bin\Microsoft.Web.Infrastructure.dll
+D:\Lendon\ASP.Net_MVC\ASPNET_MVC\bin\Newtonsoft.Json.dll
+D:\Lendon\ASP.Net_MVC\ASPNET_MVC\bin\WebGrease.dll
+D:\Lendon\ASP.Net_MVC\ASPNET_MVC\bin\Antlr3.Runtime.xml
+D:\Lendon\ASP.Net_MVC\ASPNET_MVC\bin\Newtonsoft.Json.xml
+D:\Lendon\ASP.Net_MVC\ASPNET_MVC\obj\Debug\ASPNET_MVC.csproj.AssemblyReference.cache
+D:\Lendon\ASP.Net_MVC\ASPNET_MVC\obj\Debug\ASPNET_MVC.csproj.CoreCompileInputs.cache
+D:\Lendon\ASP.Net_MVC\ASPNET_MVC\obj\Debug\ASPNET_MVC.csproj.CopyComplete
