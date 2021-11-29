@@ -74,3 +74,5 @@ D:\Lendon\ASP.Net_MVC\ASPNET_MVC\bin\Newtonsoft.Json.xml
 D:\Lendon\ASP.Net_MVC\ASPNET_MVC\obj\Debug\ASPNET_MVC.csproj.AssemblyReference.cache
 D:\Lendon\ASP.Net_MVC\ASPNET_MVC\obj\Debug\ASPNET_MVC.csproj.CoreCompileInputs.cache
 D:\Lendon\ASP.Net_MVC\ASPNET_MVC\obj\Debug\ASPNET_MVC.csproj.CopyComplete
+D:\Lendon\ASP.Net_MVC\ASPNET_MVC\bin\System.Data.SqlClient.dll
+D:\Lendon\ASP.Net_MVC\ASPNET_MVC\bin\System.Data.SqlClient.xml
