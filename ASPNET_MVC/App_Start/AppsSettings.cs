@@ -2,7 +2,7 @@
 using System.Configuration;
 using System.Globalization;
 
-namespace ASPNET_MVC.App_Start
+namespace ASPNET_MVC
 {
     public static class AppSettings
     {
@@ -10,7 +10,7 @@ namespace ASPNET_MVC.App_Start
         {
             get
             {
-                return Setting<string>("ClientSecret");
+                return Setting<string>("DBConnectionString");
             }
         }
 

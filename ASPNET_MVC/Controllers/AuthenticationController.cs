@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
+using ASPNET_MVC.DataLayer;
 
 namespace ASPNET_MVC.Controllers
 {
@@ -11,6 +8,9 @@ namespace ASPNET_MVC.Controllers
         // GET: Authentication
         public ActionResult Login()
         {
+            Authentication _auth = new Authentication();
+            _auth.Login();
+
             return View();
         }
 
