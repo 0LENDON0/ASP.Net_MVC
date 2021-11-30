@@ -60,14 +60,9 @@
                 {
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        @Html.RouteLink("Dashboard", "features", null, new { @class = "nav-link" })
+                        @Html.RouteLink("Dashboard", "ClientIndex", null, new { @class = "nav-link" })
                     </li>
                 </ul>
-                <!-- Left links -->
-                <div class="d-flex align-items-center">
-                    @Html.RouteLink("Login", "login", null, new { @class = "btn text-primary  px-3 me-2" })
-                    @Html.RouteLink("Sign Up", "signup", null, new { @class = "btn btn-primary me-3" })
-                </div>
                 }
 
             </div>

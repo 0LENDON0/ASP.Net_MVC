@@ -1,10 +1,12 @@
 ﻿using System.Web.Mvc;
 using ASPNET_MVC.Controllers.Attributes;
+using ASPNET_MVC.Controllers.Filters;
 using ASPNET_MVC.DataLayer;
 using ASPNET_MVC.Models.Implementation;
 
 namespace ASPNET_MVC.Controllers
 {
+    [UnauthenticatedFilter]
     public class AuthenticationController : Controller
     {
         [HttpGet]

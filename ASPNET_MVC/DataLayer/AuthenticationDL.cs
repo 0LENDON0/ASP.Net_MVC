@@ -16,7 +16,7 @@ namespace ASPNET_MVC.DataLayer
         {
             NumberOfAttempts++;
 
-            UserData = DBConnection.GetData(DBOperations.PrepStoredProcedure(new AuthenticationSP(auth.Username, auth.Email, auth.Password)));
+            UserData = DBConnection.GetData(DBOperations.PrepStoredProcedure(new Authentication_SP(auth.Username, auth.Email, auth.Password)));
 
             return UserData != null && UserData.Rows.GetEnumerator().MoveNext();
         }

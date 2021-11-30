@@ -1,8 +1,45 @@
-﻿
+﻿@model IEnumerable<ASPNET_MVC.Models.Implementation.Client>
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "CRUD Temp";
     Layout = "~/Views/Shared/_ClientMasterPage.cshtml";
 }
 
-<h2>Index</h2>
+<h2>CRUD Temp</h2>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(x => x.Id) </th>
+            <th>@Html.DisplayNameFor(x => x.Firstname) </th>
+            <th>@Html.DisplayNameFor(x => x.Middlename) </th>
+            <th>@Html.DisplayNameFor(x => x.Lastname) </th>
+            <th>@Html.DisplayNameFor(x => x.Birthdate) </th>
+            <th>@Html.DisplayNameFor(x => x.Gender) </th>
+            <th>@Html.DisplayNameFor(x => x.Email) </th>
+            <th>@Html.DisplayNameFor(x => x.ContactNumber) </th>
+            <th>@Html.DisplayNameFor(x => x.Country) </th>
+            <th>@Html.DisplayNameFor(x => x.Language) </th>
+            <th>@Html.DisplayNameFor(x => x.Timestamp) </th>
+        </tr>
+    </thead>
+    <tbody>
+       @foreach (var row in Model)
+       {
+           <tr>
+               <td>@Html.DisplayFor(m => row.Id)</td>
+               <td>@Html.DisplayFor(m => row.Firstname)</td>
+               <td>@Html.DisplayFor(m => row.Middlename)</td>
+               <td>@Html.DisplayFor(m => row.Lastname)</td>
+               <td>@Html.DisplayFor(m => row.Birthdate)</td>
+               <td>@Html.DisplayFor(m => row.Gender)</td>
+               <td>@Html.DisplayFor(m => row.Email)</td>
+               <td>@Html.DisplayFor(m => row.ContactNumber)</td>
+               <td>@Html.DisplayFor(m => row.Country)</td>
+               <td>@Html.DisplayFor(m => row.Language)</td>
+               <td>@Html.DisplayFor(m => row.Timestamp)</td>
+           </tr>
+       }
+    </tbody>
+</table>
 

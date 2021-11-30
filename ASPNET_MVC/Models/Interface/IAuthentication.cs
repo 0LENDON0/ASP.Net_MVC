@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace ASPNET_MVC.Models.Interface
+﻿namespace ASPNET_MVC.Models.Interface
 {
     internal interface IAuthentication
     {

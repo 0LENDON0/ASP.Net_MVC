@@ -178,17 +178,22 @@
     <Compile Include="Controllers\AuthenticationController.cs" />
     <Compile Include="Controllers\ClientAuthenticatedController.cs" />
     <Compile Include="Controllers\ClientController.cs" />
+    <Compile Include="Controllers\Filters\UnauthenticatedFilter.cs" />
     <Compile Include="Controllers\Filters\UserAuthenticationFilter.cs" />
     <Compile Include="DataLayer\AuthenticationDL.cs" />
+    <Compile Include="DataLayer\ClientAuthenticatedDL.cs" />
     <Compile Include="DataLayer\DBConnection.cs" />
     <Compile Include="DataLayer\Operations\DBOperations.cs" />
-    <Compile Include="DataLayer\StoredProcedures\AuthenticationSP.cs" />
+    <Compile Include="DataLayer\StoredProcedures\Authentication_SP.cs" />
+    <Compile Include="DataLayer\StoredProcedures\ClientAll_SP.cs" />
     <Compile Include="DataLayer\StoredProcedures\StoredProcedure.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Implementation\Authentication.cs" />
+    <Compile Include="Models\Implementation\Client.cs" />
     <Compile Include="Models\Interface\IAuthentication.cs" />
+    <Compile Include="Models\Interface\IClient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
