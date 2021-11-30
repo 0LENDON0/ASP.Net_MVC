@@ -173,9 +173,17 @@
     <Compile Include="App_Start\AppsSettings.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\Attributes\PreserveModelState.cs" />
+    <Compile Include="Controllers\Attributes\RestoreModelState.cs" />
     <Compile Include="Controllers\AuthenticationController.cs" />
+    <Compile Include="Controllers\ClientAuthenticatedController.cs" />
     <Compile Include="Controllers\ClientController.cs" />
-    <Compile Include="DataLayer\Authentication.cs" />
+    <Compile Include="Controllers\Filters\UserAuthenticationFilter.cs" />
+    <Compile Include="DataLayer\AuthenticationDL.cs" />
+    <Compile Include="DataLayer\DBConnection.cs" />
+    <Compile Include="DataLayer\Operations\DBOperations.cs" />
+    <Compile Include="DataLayer\StoredProcedures\AuthenticationSP.cs" />
+    <Compile Include="DataLayer\StoredProcedures\StoredProcedure.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -193,6 +201,7 @@
     <Content Include="Views\Client\About.cshtml" />
     <Content Include="Views\Authentication\Login.cshtml" />
     <Content Include="Views\Authentication\SignUp.cshtml" />
+    <Content Include="Views\ClientAuthenticated\ClientIndex.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

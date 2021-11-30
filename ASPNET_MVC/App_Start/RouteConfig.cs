@@ -14,6 +14,12 @@ namespace ASPNET_MVC
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+                name: "clientIndex",
+                url: "me/",
+                defaults: new { controller = "ClientAuthenticated", action = "ClientIndex" }
+            );
+
+            routes.MapRoute(
                 name: "login",
                 url: "authentication/login",
                 defaults: new { controller = "Authentication", action = "Login" }
