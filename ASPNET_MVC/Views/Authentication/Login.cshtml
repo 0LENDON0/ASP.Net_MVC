@@ -19,7 +19,7 @@
             }
 
             <label for="inputUsername" class="sr-only">Username or Email Address</label>
-            <input type="text" id="inputUsername" name="username" class="form-control" placeholder="" autofocus>
+            <input type="text" id="inputUsername" name="username" class="form-control" value="@Html.ValueFor(x => x.Username)" placeholder="" autofocus>
             @Html.ValidationMessageFor(a => a.Username, "", new { @class = "text-danger" })
 
             <br/>

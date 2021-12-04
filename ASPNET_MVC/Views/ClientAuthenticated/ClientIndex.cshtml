@@ -5,8 +5,7 @@
 }
 
 <h2>CRUD Temp</h2>
-
-
+@Html.RouteLink("Add", "clientAdd", new {@class = "btn btn-primary" })
 <table class="table">
     <thead>
         <tr>
@@ -21,6 +20,7 @@
             <th>@Html.DisplayNameFor(x => x.Country) </th>
             <th>@Html.DisplayNameFor(x => x.Language) </th>
             <th>@Html.DisplayNameFor(x => x.Timestamp) </th>
+            <th>Actions </th>
         </tr>
     </thead>
     <tbody>
@@ -38,6 +38,10 @@
                <td>@Html.DisplayFor(m => row.Country)</td>
                <td>@Html.DisplayFor(m => row.Language)</td>
                <td>@Html.DisplayFor(m => row.Timestamp)</td>
+               <td>
+                   @Html.RouteLink("EDIT","clientEdit", new { id = row.Id }, null) |
+                   @Html.RouteLink("DELETE", "clientDelete", new { id = row.Id },  null) 
+               </td>
            </tr>
        }
     </tbody>

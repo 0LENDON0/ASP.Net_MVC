@@ -4,6 +4,7 @@ using System.Linq;
 using ASPNET_MVC.DataLayer.Operations;
 using ASPNET_MVC.DataLayer.StoredProcedures;
 using ASPNET_MVC.Models.Implementation;
+using ASPNET_MVC.Common;
 
 namespace ASPNET_MVC.DataLayer
 {
@@ -16,7 +17,15 @@ namespace ASPNET_MVC.DataLayer
         {
             NumberOfAttempts++;
 
-            UserData = DBConnection.GetData(DBOperations.PrepStoredProcedure(new Authentication_SP(auth.Username, auth.Email, auth.Password)));
+            var _pr = new Authentication_SP();
+            _pr.Password = auth.Password;
+
+            if (CommonMethods.IsEmail(auth.Username))
+                _pr.Email = auth.Username;
+            else
+                _pr.Username = auth.Username;
+
+            UserData = DBConnection.GetData(DBOperations.PrepStoredProcedure(_pr.Compile()));
 
             return UserData != null && UserData.Rows.GetEnumerator().MoveNext();
         }

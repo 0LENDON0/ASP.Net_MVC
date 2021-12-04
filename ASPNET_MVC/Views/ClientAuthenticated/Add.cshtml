@@ -1,0 +1,75 @@
+﻿@model ASPNET_MVC.Models.Implementation.Client
+@{
+    ViewBag.Title = "Add";
+    Layout = "~/Views/Shared/_ClientMasterPage.cshtml";
+}
+
+<h2>Add</h2>
+
+@using (Html.BeginForm("Add", "ClientAuthenticated", FormMethod.Post, "form-inline"))
+{
+    @Html.AntiForgeryToken()
+
+    if (@ViewBag.Message != null)
+    {
+        @ViewBag.Message
+    }
+
+    <div class="form-group">
+        @Html.LabelFor(x => x.Firstname, new { htmlAttributes = new { @class = "control-label" } })
+        @Html.EditorFor(x => x.Firstname, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(x => x.Firstname, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(x => x.Middlename, new { htmlAttributes = new { @class = "control-label" } })
+        @Html.EditorFor(x => x.Middlename, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(x => x.Middlename, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(x => x.Lastname, new { htmlAttributes = new { @class = "control-label" } })
+        @Html.EditorFor(x => x.Lastname, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(x => x.Lastname, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(x => x.Birthdate, new { htmlAttributes = new { @class = "control-label" } })
+        @Html.EditorFor(x => x.Birthdate, new { htmlAttributes = new { type = "date", @class = "form-control" } })
+        @Html.ValidationMessageFor(x => x.Birthdate, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(x => x.Gender, new { htmlAttributes = new { @class = "control-label" } })
+        @Html.EditorFor(x => x.Gender, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(x => x.Gender, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(x => x.Email, new { htmlAttributes = new { @class = "control-label" } })
+        @Html.EditorFor(x => x.Email, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(x => x.Email, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(x => x.ContactNumber, new { htmlAttributes = new { @class = "control-label" } })
+        @Html.EditorFor(x => x.ContactNumber, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(x => x.ContactNumber, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(x => x.Country, new { htmlAttributes = new { @class = "control-label" } })
+        @Html.EditorFor(x => x.Country, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(x => x.Country, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(x => x.Language, new { htmlAttributes = new { @class = "control-label" } })
+        @Html.EditorFor(x => x.Language, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(x => x.Language, "", new { @class = "text-danger" })
+    </div>
+    <br />
+    <div class="form-group">
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+    </div>
+}

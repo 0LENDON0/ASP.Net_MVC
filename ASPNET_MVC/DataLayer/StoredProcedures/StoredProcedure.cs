@@ -14,5 +14,7 @@ namespace ASPNET_MVC.DataLayer.StoredProcedures
         {
             SqlParameters = new List<SqlParameter>();
         }
+
+        public abstract StoredProcedure Compile();
     }
 }

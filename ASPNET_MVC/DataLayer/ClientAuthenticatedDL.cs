@@ -5,6 +5,7 @@ using ASPNET_MVC.Models.Interface;
 using ASPNET_MVC.Models.Implementation;
 using System.Collections.Generic;
 using System.Data;
+using System.Linq;
 
 namespace ASPNET_MVC.DataLayer
 {
@@ -12,7 +13,35 @@ namespace ASPNET_MVC.DataLayer
     {
         public List<Client> GetAllClients()
         {
-            var dt = DBConnection.GetData(DBOperations.PrepStoredProcedure(new ClientAll_SP()));
+            var dt = DBConnection.GetData(DBOperations.PrepStoredProcedure(new ClientAll_SP().Compile()));
+
+            return ClientParser(dt);
+        }
+
+        public Client Find (int id)
+        {
+            var dt = DBConnection.GetData(DBOperations.PrepStoredProcedure(new ClientFind_SP() { Id = id }.Compile()));
+
+            return ClientParser(dt).FirstOrDefault();
+        }
+
+        public bool ClientAdd(Client clientObj)
+        {
+            return DBConnection.ExecuteCommand(DBOperations.PrepStoredProcedure(new ClienAdd_SP() { Client = clientObj }.Compile()));
+        }
+
+        public bool ClientDelete(int id)
+        {
+            return DBConnection.ExecuteCommand(DBOperations.PrepStoredProcedure(new ClientDelete_SP() { Id = id }.Compile()));
+        }
+
+        public bool ClientUpdate(Client client)
+        {
+            return DBConnection.ExecuteCommand(DBOperations.PrepStoredProcedure(new ClientEdit_SP() { Client=  client, Id = client.Id }.Compile()));
+        }
+
+        private List<Client> ClientParser(DataTable dt)
+        {
 
             var _ml = new List<Client>();
 

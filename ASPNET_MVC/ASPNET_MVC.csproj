@@ -155,6 +155,7 @@
     <Content Include="Scripts\bootstrap\bootstrap.esm.min.js" />
     <Content Include="Scripts\bootstrap\bootstrap.js" />
     <Content Include="Scripts\bootstrap\bootstrap.min.js" />
+    <Content Include="NotFound.html" />
     <None Include="Scripts\jquery-3.6.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.6.0.js" />
     <Content Include="Scripts\jquery-3.6.0.min.js" />
@@ -173,11 +174,14 @@
     <Compile Include="App_Start\AppsSettings.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Common\CommonExtension.cs" />
+    <Compile Include="Common\CommonMethods.cs" />
     <Compile Include="Controllers\Attributes\PreserveModelState.cs" />
     <Compile Include="Controllers\Attributes\RestoreModelState.cs" />
     <Compile Include="Controllers\AuthenticationController.cs" />
     <Compile Include="Controllers\ClientAuthenticatedController.cs" />
     <Compile Include="Controllers\ClientController.cs" />
+    <Compile Include="Controllers\ErrorsController.cs" />
     <Compile Include="Controllers\Filters\UnauthenticatedFilter.cs" />
     <Compile Include="Controllers\Filters\UserAuthenticationFilter.cs" />
     <Compile Include="DataLayer\AuthenticationDL.cs" />
@@ -185,7 +189,11 @@
     <Compile Include="DataLayer\DBConnection.cs" />
     <Compile Include="DataLayer\Operations\DBOperations.cs" />
     <Compile Include="DataLayer\StoredProcedures\Authentication_SP.cs" />
+    <Compile Include="DataLayer\StoredProcedures\ClienAdd_SP.cs" />
     <Compile Include="DataLayer\StoredProcedures\ClientAll_SP.cs" />
+    <Compile Include="DataLayer\StoredProcedures\ClientDelete_SP.cs" />
+    <Compile Include="DataLayer\StoredProcedures\ClientEdit_SP.cs" />
+    <Compile Include="DataLayer\StoredProcedures\ClientFind_SP.cs" />
     <Compile Include="DataLayer\StoredProcedures\StoredProcedure.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -207,6 +215,10 @@
     <Content Include="Views\Authentication\Login.cshtml" />
     <Content Include="Views\Authentication\SignUp.cshtml" />
     <Content Include="Views\ClientAuthenticated\ClientIndex.cshtml" />
+    <Content Include="Views\Errors\NotFound.cshtml" />
+    <Content Include="Views\ClientAuthenticated\Add.cshtml" />
+    <Content Include="Views\ClientAuthenticated\Edit.cshtml" />
+    <Content Include="Views\ClientAuthenticated\Delete.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -42,7 +42,7 @@ namespace ASPNET_MVC.Controllers
                     else
                     {
                         TempData["Attempt"] = _auth.NumberOfAttempts;
-                        ModelState.AddModelError("Attempt", "Username/Email or Password is incorrect. Attempt: " + _auth.NumberOfAttempts.ToString());
+                        ModelState.AddModelError("Attempt", "Username or Password is incorrect. Attempt: " + _auth.NumberOfAttempts.ToString());
                         return RedirectToAction("Login");
                     }
                 }
